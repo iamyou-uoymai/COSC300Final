@@ -52,27 +52,35 @@
                 android:background="#40FFFFFF"
                 android:layout_marginBottom="12dp" />
 
-            <EditText
-                android:id="@+id/inputPassword"
+            <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/hint_password"
-                android:inputType="textPassword"
-                android:autofillHints="password"
-                android:importantForAutofill="yes"
-                android:textColor="@android:color/white"
-                android:textColorHint="#AAFFFFFF"
-                android:padding="14dp"
-                android:background="@android:color/transparent"
-                android:drawablePadding="12dp"
-                android:layout_marginBottom="16dp"
-                android:contentDescription="Password" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#40FFFFFF"
-                android:layout_marginBottom="28dp" />
+                android:layout_marginBottom="28dp">
+                <EditText
+                    android:id="@+id/inputPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_password"
+                    android:inputType="textPassword"
+                    android:autofillHints="password"
+                    android:importantForAutofill="yes"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="#AAFFFFFF"
+                    android:padding="14dp"
+                    android:background="@android:color/transparent"
+                    android:paddingEnd="56dp"
+                    android:contentDescription="Password" />
+                <ImageButton
+                    android:id="@+id/btnTogglePassword"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:background="@drawable/bg_circle_icon"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_eye"
+                    android:contentDescription="Toggle password visibility"
+                    android:tint="#FFFFFF" />
+            </FrameLayout>
 
             <Button
                 android:id="@+id/btnLogin"

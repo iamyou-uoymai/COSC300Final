@@ -31,4 +31,18 @@
     <string name="desc_toggle_auth">Switch authentication mode</string>
     <string name="hint_name">Full Name</string>
     <string name="hint_phone">Phone Number</string>
+     <!-- New password visibility toggle strings -->
+    <string name="show_password">Show password</string>
+    <string name="show_passwords">Show passwords</string>
+    <string name="show_confirm_password">Show confirm password</string>
+    <!-- Password requirements -->
+    <string name="password_requirements_title">Password Requirements</string>
+    <string name="password_requirements_body">Your password must meet all of these:
+• At least 8 characters
+• At least one digit (0-9)
+• At least one uppercase letter (A-Z)
+• At least one lowercase letter (a-z)
+• At least one special character (e.g. ! @ # $ % ^ &amp; *)</string>
+    <string name="password_requirements_link">Password requirements</string>
+    <string name="password_requirements_all_satisfied">All password requirements satisfied</string>
 </resources>

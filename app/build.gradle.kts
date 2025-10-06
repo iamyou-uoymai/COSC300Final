@@ -117,7 +117,6 @@ dependencies {
     implementation("io.github.jan-tennert.supabase:storage-kt")
     implementation("io.github.jan-tennert.supabase:gotrue-kt")
 
-
     // --- Ktor stack aligned to Supabase 2.4.0 expectations (2.3.3) ---
     implementation("io.ktor:ktor-client-android:2.3.3")
     implementation("io.ktor:ktor-client-logging:2.3.3")

@@ -89,19 +89,35 @@
                 android:background="#40FFFFFF"
                 android:layout_marginBottom="12dp" />
 
-            <EditText
-                android:id="@+id/inputPassword"
+            <!-- Replace password field + checkbox with inline toggle -->
+            <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/hint_password"
-                android:inputType="textPassword"
-                android:autofillHints="password"
-                android:importantForAutofill="yes"
-                android:textColor="@android:color/white"
-                android:textColorHint="#AAFFFFFF"
-                android:padding="14dp"
-                android:background="@android:color/transparent"
-                android:layout_marginBottom="16dp" />
+                android:layout_marginBottom="12dp">
+                <EditText
+                    android:id="@+id/inputPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_password"
+                    android:inputType="textPassword"
+                    android:autofillHints="password"
+                    android:importantForAutofill="yes"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="#AAFFFFFF"
+                    android:padding="14dp"
+                    android:background="@android:color/transparent"
+                    android:paddingEnd="56dp" />
+                <ImageButton
+                    android:id="@+id/btnTogglePassword"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:background="@drawable/bg_circle_icon"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_eye"
+                    android:contentDescription="Toggle password visibility"
+                    android:tint="#FFFFFF" />
+            </FrameLayout>
 
             <View
                 android:layout_width="match_parent"
@@ -109,17 +125,58 @@
                 android:background="#40FFFFFF"
                 android:layout_marginBottom="12dp" />
 
-            <EditText
-                android:id="@+id/inputConfirmPassword"
+            <!-- Confirm password with inline toggle -->
+            <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/hint_confirm_password"
-                android:inputType="textPassword"
-                android:textColor="@android:color/white"
-                android:textColorHint="#AAFFFFFF"
-                android:padding="14dp"
-                android:background="@android:color/transparent"
-                android:layout_marginBottom="24dp" />
+                android:layout_marginBottom="12dp">
+                <EditText
+                    android:id="@+id/inputConfirmPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_confirm_password"
+                    android:inputType="textPassword"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="#AAFFFFFF"
+                    android:padding="14dp"
+                    android:background="@android:color/transparent"
+                    android:paddingEnd="56dp" />
+                <ImageButton
+                    android:id="@+id/btnToggleConfirmPassword"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:background="@drawable/bg_circle_icon"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_eye"
+                    android:contentDescription="Toggle confirm password visibility"
+                    android:tint="#FFFFFF" />
+            </FrameLayout>
+
+            <!-- Password help link -->
+            <TextView
+                android:id="@+id/tvPasswordRequirements"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/password_requirements_link"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:padding="4dp"
+                android:layout_marginBottom="4dp"
+                android:contentDescription="Show password requirements"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <!-- Dynamic password status -->
+            <TextView
+                android:id="@+id/tvPasswordStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:layout_marginBottom="20dp"
+                android:contentDescription="Password requirement status" />
 
             <Button
                 android:id="@+id/btnSignup"
