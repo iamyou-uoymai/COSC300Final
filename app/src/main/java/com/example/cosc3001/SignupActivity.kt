@@ -2,7 +2,6 @@ package com.example.cosc3001
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
@@ -14,16 +13,9 @@ class SignupActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
 
-        // Home navigation
-        findViewById<ImageButton>(R.id.homeButton)?.setOnClickListener {
-            val intent = Intent(this, HomeActivity::class.java)
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)
-            startActivity(intent)
-        }
         // Link to Login
         findViewById<TextView>(R.id.linkToLogin)?.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
         }
     }
 }
-

@@ -105,27 +105,27 @@
 
     </LinearLayout>
 
-    <!-- New Home button relocated to top-left corner -->
+    <!-- Home button relocated to top-right corner -->
     <ImageButton
         android:id="@+id/homeButton"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_gravity="top|start"
-        android:layout_margin="12dp"
-        android:background="?attr/selectableItemBackgroundBorderless"
+        android:layout_gravity="top|end"
+        android:layout_margin="16dp"
+        android:background="@android:color/transparent"
         android:contentDescription="@string/desc_home"
-        android:padding="8dp"
-        android:src="@drawable/ic_home_24"
+        android:padding="0dp"
+        android:src="@drawable/ic_home"
         android:tint="#FFFFFF"
         tools:ignore="UseAppTint" />
 
-    <!-- Replace original top-right vertical group: now only reload button remains top-right -->
+    <!-- Reload button moved to top-start to avoid overlap with home button -->
     <ImageButton
         android:id="@+id/reloadScanButton"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_gravity="top|end"
-        android:layout_margin="12dp"
+        android:layout_gravity="top|start"
+        android:layout_margin="16dp"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:contentDescription="Reload scanning"
         android:padding="8dp"

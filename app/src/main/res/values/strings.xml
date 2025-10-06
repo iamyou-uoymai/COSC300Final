@@ -29,4 +29,6 @@
     <string name="link_to_signup">No account? Sign up</string>
     <string name="link_to_login">Already have an account? Log in</string>
     <string name="desc_toggle_auth">Switch authentication mode</string>
+    <string name="hint_name">Full Name</string>
+    <string name="hint_phone">Phone Number</string>
 </resources>

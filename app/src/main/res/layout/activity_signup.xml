@@ -11,7 +11,7 @@
         android:paddingLeft="24dp"
         android:paddingRight="24dp"
         android:paddingBottom="24dp"
-        android:paddingTop="84dp">
+        android:paddingTop="48dp"> <!-- reduced top padding since home button removed -->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -28,6 +28,46 @@
                 android:textSize="28sp"
                 android:layout_marginBottom="32dp"
                 android:fontFamily="sans-serif-medium" />
+
+            <EditText
+                android:id="@+id/inputName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_name"
+                android:inputType="textPersonName"
+                android:autofillHints="name"
+                android:importantForAutofill="yes"
+                android:textColor="@android:color/white"
+                android:textColorHint="#AAFFFFFF"
+                android:padding="14dp"
+                android:background="@android:color/transparent"
+                android:layout_marginBottom="16dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#40FFFFFF"
+                android:layout_marginBottom="12dp" />
+
+            <EditText
+                android:id="@+id/inputPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_phone"
+                android:inputType="phone"
+                android:autofillHints="phoneNumber"
+                android:importantForAutofill="yes"
+                android:textColor="@android:color/white"
+                android:textColorHint="#AAFFFFFF"
+                android:padding="14dp"
+                android:background="@android:color/transparent"
+                android:layout_marginBottom="16dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#40FFFFFF"
+                android:layout_marginBottom="12dp" />
 
             <EditText
                 android:id="@+id/inputEmail"
@@ -102,16 +142,4 @@
                 android:contentDescription="Go to login screen" />
         </LinearLayout>
     </ScrollView>
-
-    <ImageButton
-        android:id="@+id/homeButton"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_gravity="top|start"
-        android:layout_margin="12dp"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:contentDescription="@string/desc_home"
-        android:padding="8dp"
-        android:src="@drawable/ic_home_24"
-        android:tint="#FFFFFF" />
 </FrameLayout>

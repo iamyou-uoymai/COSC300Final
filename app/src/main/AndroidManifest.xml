@@ -16,7 +16,7 @@
         android:theme="@style/Theme.COSC3001">
 
         <activity
-            android:name=".HomeActivity"
+            android:name=".LoginActivity"
             android:exported="true"
             android:theme="@style/Theme.COSC3001">
             <intent-filter>
@@ -24,6 +24,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true"
+            android:theme="@style/Theme.COSC3001" />
 
         <activity
             android:name=".MainActivity"
@@ -44,10 +49,6 @@
             android:theme="@style/Theme.COSC3001" />
 
         <!-- New auth UI activities (UI only, no logic yet) -->
-        <activity
-            android:name=".LoginActivity"
-            android:exported="false"
-            android:theme="@style/Theme.COSC3001" />
         <activity
             android:name=".SignupActivity"
             android:exported="false"
