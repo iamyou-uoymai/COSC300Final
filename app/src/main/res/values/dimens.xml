@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Central QR overlay size (reduced from 360dp to 320dp for better fit) -->
+    <dimen name="qr_overlay_size">320dp</dimen>
+</resources>
+

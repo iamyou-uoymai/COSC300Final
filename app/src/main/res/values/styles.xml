@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Widget.COSC3001.Button.Primary" parent="@style/Widget.AppCompat.Button">
+        <item name="android:background">@drawable/selector_btn_primary</item>
+        <item name="android:textColor">@color/brand_on_primary</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:minWidth">120dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+    </style>
+</resources>
+

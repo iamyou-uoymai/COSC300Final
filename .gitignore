@@ -1,0 +1,34 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/app/build
+/sdk/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+# Keystores
+*.jks
+*.keystore
+# Gradle
+.gradle/
+**/build/
+# Logs
+*.log
+# Generated
+app/generated/
+# APK / AAB outputs
+*.apk
+*.aab
+# Misc
+.idea/
+# Jetifier / Cache
+.jetifier-cache/

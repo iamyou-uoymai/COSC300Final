@@ -1,0 +1,7 @@
+# CODEOWNERS - adjust GitHub handles as needed
+# Syntax: pattern  owner1  owner2
+
+*       @your-org/maintainers
+/app/** @your-org/android-leads
+/sdk/** @your-org/native-leads
+

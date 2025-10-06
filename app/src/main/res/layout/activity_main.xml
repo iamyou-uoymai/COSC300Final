@@ -1,0 +1,137 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <io.github.sceneview.ar.ARSceneView
+        android:id="@+id/arSceneView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Semi-transparent overlay for QR scan guidance -->
+    <ImageView
+        android:id="@+id/qrOverlay"
+        android:layout_width="@dimen/qr_overlay_size"
+        android:layout_height="@dimen/qr_overlay_size"
+        android:layout_gravity="center"
+        android:contentDescription="QR scan guide"
+        android:alpha="0.18"
+        android:visibility="visible"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true" />
+
+    <!-- Indeterminate loading indicator for remote model fetch -->
+    <LinearLayout
+        android:id="@+id/modelLoadingContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="12dp"
+        android:background="@android:color/transparent"
+        android:visibility="gone">
+        <ProgressBar
+            android:id="@+id/modelLoading"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:indeterminate="true" />
+        <TextView
+            android:id="@+id/modelLoadingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Loading model..."
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:shadowColor="#80000000"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/chatFabContainer"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="20dp"
+        android:background="@drawable/bg_chat_fab_ripple"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:focusable="true"
+        android:elevation="6dp">
+
+        <ImageView
+            android:id="@+id/chatFabIcon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:contentDescription="Chat"
+            android:src="@android:drawable/ic_dialog_email"
+            app:tint="#FFFFFF" />
+
+        <EditText
+            android:id="@+id/chatEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:hint="Ask..."
+            android:singleLine="true"
+            android:imeOptions="actionSend"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#99FFFFFF"
+            android:background="@android:color/transparent"
+            android:paddingStart="12dp"
+            android:paddingEnd="8dp" />
+
+        <ImageButton
+            android:id="@+id/chatSendButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:visibility="gone"
+            android:background="@android:color/transparent"
+            android:contentDescription="Send"
+            android:src="@android:drawable/ic_menu_send"
+            app:tint="#FFFFFF"
+            tools:ignore="UseAppTint" />
+
+    </LinearLayout>
+
+    <!-- New Home button relocated to top-left corner -->
+    <ImageButton
+        android:id="@+id/homeButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="top|start"
+        android:layout_margin="12dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/desc_home"
+        android:padding="8dp"
+        android:src="@drawable/ic_home_24"
+        android:tint="#FFFFFF"
+        tools:ignore="UseAppTint" />
+
+    <!-- Replace original top-right vertical group: now only reload button remains top-right -->
+    <ImageButton
+        android:id="@+id/reloadScanButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="top|end"
+        android:layout_margin="12dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Reload scanning"
+        android:padding="8dp"
+        android:src="@android:drawable/ic_popup_sync"
+        android:tint="#FFFFFF"
+        android:visibility="gone"
+        tools:ignore="UseAppTint" />
+
+</FrameLayout>

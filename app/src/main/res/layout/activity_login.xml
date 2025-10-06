@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_app_gradient">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingBottom="24dp"
+        android:paddingTop="84dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/loginTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_login"
+                android:textColor="@android:color/white"
+                android:textSize="28sp"
+                android:layout_marginBottom="32dp"
+                android:fontFamily="sans-serif-medium" />
+
+            <EditText
+                android:id="@+id/inputEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_email"
+                android:inputType="textEmailAddress"
+                android:autofillHints="emailAddress"
+                android:importantForAutofill="yes"
+                android:textColor="@android:color/white"
+                android:textColorHint="#AAFFFFFF"
+                android:padding="14dp"
+                android:background="@android:color/transparent"
+                android:drawablePadding="12dp"
+                android:layout_marginBottom="16dp"
+                android:contentDescription="Email address" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#40FFFFFF"
+                android:layout_marginBottom="12dp" />
+
+            <EditText
+                android:id="@+id/inputPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_password"
+                android:inputType="textPassword"
+                android:autofillHints="password"
+                android:importantForAutofill="yes"
+                android:textColor="@android:color/white"
+                android:textColorHint="#AAFFFFFF"
+                android:padding="14dp"
+                android:background="@android:color/transparent"
+                android:drawablePadding="12dp"
+                android:layout_marginBottom="16dp"
+                android:contentDescription="Password" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#40FFFFFF"
+                android:layout_marginBottom="28dp" />
+
+            <Button
+                android:id="@+id/btnLogin"
+                style="@style/Widget.COSC3001.Button.Primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_login"
+                android:enabled="false"
+                android:contentDescription="Login (disabled placeholder)" />
+
+            <TextView
+                android:id="@+id/linkToSignup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/link_to_signup"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:layout_marginTop="20dp"
+                android:contentDescription="Go to signup screen"
+                android:padding="8dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/homeButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="top|start"
+        android:layout_margin="12dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/desc_home"
+        android:padding="8dp"
+        android:src="@drawable/ic_home_24"
+        app:tint="#FFFFFF" />
+</FrameLayout>

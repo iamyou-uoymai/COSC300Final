@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.COSC3001" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/brand_purple</item>
+        <item name="colorPrimaryDark">@color/brand_purple_dark</item>
+        <item name="colorAccent">@color/brand_blue</item>
+        <item name="android:colorBackground">@color/brand_background</item>
+        <item name="android:textColorPrimary">@color/brand_on_background</item>
+        <item name="android:statusBarColor">@color/brand_status_bar</item>
+        <item name="android:navigationBarColor">@color/brand_nav_bar</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+</resources>
+

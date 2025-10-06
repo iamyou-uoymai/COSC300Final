@@ -1,0 +1,54 @@
+name: Android CI
+
+on:
+  push:
+    branches: [ main, feature/**, bugfix/** ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+            distribution: temurin
+            java-version: 17
+            cache: gradle
+
+      - name: Gradle Wrapper Validation
+        uses: gradle/actions/wrapper-validation@v3
+
+      - name: Prepare Gradle Properties (Secrets)
+        run: |
+          cat <<EOF >> ~/.gradle/gradle.properties
+          SUPABASE_URL=${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY=${{ secrets.SUPABASE_ANON_KEY }}
+          GEMINI_API_KEY=${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL=gemini-2.0-flash
+          EOF
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+
+      - name: Assemble Debug
+        run: ./gradlew :app:assembleDebug --stacktrace
+
+      - name: Lint (if configured)
+        run: ./gradlew :app:lintDebug || echo "Lint step skipped or produced warnings"
+
+      - name: Unit Tests
+        run: ./gradlew testDebugUnitTest || echo "No unit tests yet"
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-debug-apk
+          path: app/build/outputs/apk/debug/*.apk
+

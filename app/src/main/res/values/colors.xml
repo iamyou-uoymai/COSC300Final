@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand palette: blueish purplish -->
+    <color name="brand_purple">#6A5AE0</color>
+    <color name="brand_purple_dark">#4B43B2</color>
+    <color name="brand_blue">#3D8BFF</color>
+    <color name="brand_blue_dark">#2568CC</color>
+    <color name="brand_background">#101425</color>
+    <color name="brand_surface">#1A2133</color>
+    <color name="brand_on_primary">#FFFFFFFF</color>
+    <color name="brand_on_background">#F2F4F8</color>
+    <color name="brand_status_bar">#352F77</color>
+    <color name="brand_nav_bar">#0C101C</color>
+
+    <!-- Legacy names kept (mapped) to avoid refactor churn -->
+    <color name="purple_200">@color/brand_purple</color>
+    <color name="purple_500">@color/brand_purple</color>
+    <color name="purple_700">@color/brand_purple_dark</color>
+    <color name="teal_200">@color/brand_blue</color>
+    <color name="teal_700">@color/brand_blue_dark</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

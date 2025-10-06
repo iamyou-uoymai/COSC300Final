@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">COSC300.1</string>
+    <!-- Buttons -->
+    <string name="btn_scan">Scan</string>
+    <string name="btn_settings">Settings</string>
+    <string name="btn_tutorial">Tutorial</string>
+    <string name="btn_about">About</string>
+    <!-- Content descriptions -->
+    <string name="desc_scan">Start scanning</string>
+    <string name="desc_settings">Open settings</string>
+    <string name="desc_tutorial">Open tutorial</string>
+    <string name="desc_about">About this app</string>
+    <string name="desc_home">Go to home</string>
+    <!-- Headers / placeholders -->
+    <string name="header_settings">Settings</string>
+    <string name="header_tutorial">Tutorial</string>
+    <string name="header_about">About</string>
+    <string name="placeholder_settings">(Placeholder) Configure application preferences here.</string>
+    <string name="placeholder_tutorial">(Placeholder) Provide step-by-step instructions on scanning a QR code and interacting with the AR dinosaur here.</string>
+    <string name="placeholder_about">(Placeholder) AR Dinosaur Exhibit Companion App. Version 1.0</string>
+    <!-- Login & Signup -->
+    <string name="title_login">Login</string>
+    <string name="title_signup">Create Account</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_confirm_password">Confirm Password</string>
+    <string name="btn_login">Log In</string>
+    <string name="btn_signup_create">Sign Up</string>
+    <string name="link_to_signup">No account? Sign up</string>
+    <string name="link_to_login">Already have an account? Log in</string>
+    <string name="desc_toggle_auth">Switch authentication mode</string>
+</resources>
