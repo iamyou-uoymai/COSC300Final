@@ -112,7 +112,7 @@ dependencies {
     implementation("io.ktor:ktor-client-logging:3.3.0")
     implementation("io.ktor:ktor-client-content-negotiation:3.3.0")
     implementation("io.ktor:ktor-serialization-kotlinx-json:3.3.0")
-    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    implementation("com.squareup.okhttp3:okhttp:5.1.0")
     // Kotlin serialization JSON (fallback parsing)
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.9.0")
 
