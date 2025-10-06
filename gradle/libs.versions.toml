@@ -16,8 +16,8 @@ sceneview = "2.3.0"
 zxingAndroidEmbedded = "4.3.0"
 litert = "2.0.2"
 # Added for Supabase integration
-supabaseKt = "3.2.4"
-ktor = "3.3.0"
+supabaseKt = "2.8.4"
+ktor = "2.3.12"
 kotlinxSerializationJson = "1.9.0"
 
 [libraries]
@@ -45,6 +45,7 @@ litert = { group = "com.google.ai.edge.litert", name = "litert", version.ref = "
 supabase-kt = { module = "io.github.jan-tennert.supabase:supabase-kt", version.ref = "supabaseKt" }
 supabase-postgrest = { module = "io.github.jan-tennert.supabase:postgrest-kt", version.ref = "supabaseKt" }
 supabase-storage = { module = "io.github.jan-tennert.supabase:storage-kt", version.ref = "supabaseKt" }
+supabase-gotrue = { module = "io.github.jan-tennert.supabase:gotrue-kt", version.ref = "supabaseKt" }
 ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
 ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor" }
 ktor-client-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktor" }

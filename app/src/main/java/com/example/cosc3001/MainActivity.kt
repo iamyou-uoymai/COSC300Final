@@ -123,18 +123,7 @@ class MainActivity : AppCompatActivity() {
     private val minDecodeIntervalMs = 150L
 
     // Supabase client and config (explicit type for lazy inference)
-    private val supabase: SupabaseClient by lazy {
-        val url = BuildConfig.SUPABASE_URL
-        val key = BuildConfig.SUPABASE_ANON_KEY
-        require(url.isNotBlank() && key.isNotBlank()) { "Supabase URL/Key missing. Set SUPABASE_URL and SUPABASE_ANON_KEY in ~/.gradle/gradle.properties (preferred) or project gradle.properties, then Sync." }
-        createSupabaseClient(
-            supabaseUrl = url,
-            supabaseKey = key
-        ) {
-            install(Postgrest)
-            install(Storage)
-        }
-    }
+    private val supabase get() = SupabaseProvider.client
     private val modelsTable = "models"
     private val modelsBucket = "glb_files"
 

@@ -63,21 +63,20 @@ class GeminiChatService(
                 .build()
             val replyText = withContext(Dispatchers.IO) {
                 client.newCall(req).execute().use { resp ->
-                    val raw = resp.body.string()
+                    val raw = resp.body?.string() // nullable
                     if (!resp.isSuccessful) {
-                        Log.w(TAG, "HTTP ${resp.code} body=${raw.take(160)}")
+                        Log.w(TAG, "HTTP ${resp.code} body=${raw?.take(160)}")
                         return@use fallbackHttp(resp.code)
                     }
-                    val parsed = runCatching { json.decodeFromString(GeminiResponse.serializer(), raw) }.getOrNull()
-                    val text = parsed?.candidates
+                    val parsed = raw?.let { runCatching { json.decodeFromString(GeminiResponse.serializer(), it) }.getOrNull() }
+                    val candidateText = parsed?.candidates
                         ?.firstOrNull()
                         ?.content
                         ?.parts
                         ?.firstOrNull()
                         ?.text
-                        ?.orEmpty()
-                        ?.trim()
-                    if (text.isNullOrBlank()) fallbackEmpty() else sanitizeForTTS(text)
+                    val cleaned = candidateText?.trim().orEmpty()
+                    if (cleaned.isBlank()) fallbackEmpty() else sanitizeForTTS(cleaned)
                 }
             }
             history.addLast(Turn("assistant", replyText))

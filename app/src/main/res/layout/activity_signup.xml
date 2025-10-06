@@ -142,4 +142,12 @@
                 android:contentDescription="Go to login screen" />
         </LinearLayout>
     </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        android:visibility="gone" />
 </FrameLayout>

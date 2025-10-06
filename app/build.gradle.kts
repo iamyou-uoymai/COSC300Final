@@ -54,11 +54,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = "17"
     }
     buildFeatures {
         compose = true
@@ -102,19 +102,27 @@ dependencies {
     implementation(project(":sdk"))
     implementation(libs.litert)
 
-    // Supabase-KT via BOM and modules (use direct coordinates here to avoid catalog issues)
-    implementation(platform("io.github.jan-tennert.supabase:bom:3.2.4"))
+    // Ktor client stack via catalog
+    implementation(libs.ktor.client.core)
+    implementation(libs.ktor.client.okhttp)
+    // Optional Ktor extras kept commented
+    //implementation(libs.ktor.client.logging)
+    //implementation(libs.ktor.client.content.negotiation)
+    //implementation(libs.ktor.serialization.kotlinx.json)
+    //implementation(libs.kotlinx.serialization.json)
+
+    // --- Supabase (using official BOM at a known published version 2.4.0) ---
+    implementation(platform("io.github.jan-tennert.supabase:bom:2.4.0"))
     implementation("io.github.jan-tennert.supabase:postgrest-kt")
     implementation("io.github.jan-tennert.supabase:storage-kt")
-    // Ktor client deps (core + engine + logging + content negotiation + serialization JSON) at 3.3.0
-    implementation("io.ktor:ktor-client-core:3.3.0")
-    implementation("io.ktor:ktor-client-okhttp:3.3.0")
-    implementation("io.ktor:ktor-client-logging:3.3.0")
-    implementation("io.ktor:ktor-client-content-negotiation:3.3.0")
-    implementation("io.ktor:ktor-serialization-kotlinx-json:3.3.0")
-    implementation("com.squareup.okhttp3:okhttp:4.12.0")
-    // Kotlin serialization JSON (fallback parsing)
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.9.0")
+    implementation("io.github.jan-tennert.supabase:gotrue-kt")
+
+
+    // --- Ktor stack aligned to Supabase 2.4.0 expectations (2.3.3) ---
+    implementation("io.ktor:ktor-client-android:2.3.3")
+    implementation("io.ktor:ktor-client-logging:2.3.3")
+    implementation("io.ktor:ktor-client-content-negotiation:2.3.3")
+    implementation("io.ktor:ktor-serialization-kotlinx-json:2.3.3")
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

@@ -11,24 +11,5 @@
 /build
 /app/build
 /sdk/build
-/captures
-.externalNativeBuild
 .cxx
 local.properties
-# Keystores
-*.jks
-*.keystore
-# Gradle
-.gradle/
-**/build/
-# Logs
-*.log
-# Generated
-app/generated/
-# APK / AAB outputs
-*.apk
-*.aab
-# Misc
-.idea/
-# Jetifier / Cache
-.jetifier-cache/
