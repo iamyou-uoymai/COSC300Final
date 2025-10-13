@@ -120,10 +120,10 @@ dependencies {
     implementation("io.github.jan-tennert.supabase:gotrue-kt")
 
     // --- Ktor stack aligned to Supabase 2.4.0 expectations (2.3.3) ---
-    implementation("io.ktor:ktor-client-android:2.3.3")
-    implementation("io.ktor:ktor-client-logging:2.3.3")
-    implementation("io.ktor:ktor-client-content-negotiation:2.3.3")
-    implementation("io.ktor:ktor-serialization-kotlinx-json:2.3.3")
+    implementation("io.ktor:ktor-client-android:3.3.1")
+    implementation("io.ktor:ktor-client-logging:3.3.1")
+    implementation("io.ktor:ktor-client-content-negotiation:3.3.1")
+    implementation("io.ktor:ktor-serialization-kotlinx-json:3.3.1")
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
