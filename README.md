@@ -143,9 +143,6 @@ A workflow (`.github/workflows/android-ci.yml`) builds the debug variant and run
 ## Contributing
 See [CONTRIBUTING.md](CONTRIBUTING.md) for style, branching, and PR guidelines.
 
-## License
-MIT – see [LICENSE](LICENSE).
-
 ## Security
 Report vulnerabilities privately – see [SECURITY.md](SECURITY.md).
 
